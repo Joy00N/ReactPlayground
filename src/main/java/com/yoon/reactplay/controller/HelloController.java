@@ -11,5 +11,10 @@ public class HelloController {
     public String hello() {
         return "Hello, the time at the server is now " + new Date() + "\n";
     }
+
+    @GetMapping("/api/user")
+    public String welcomeUser(){
+        return "Welcome! Yoonhee";
+    }
 }
 
