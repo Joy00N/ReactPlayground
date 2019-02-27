@@ -9,5 +9,4 @@ public class ReactplayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ReactplayApplication.class, args);
 	}
-
 }
