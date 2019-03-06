@@ -12,9 +12,14 @@ export default class Save extends React.Component {
         };
     }
 
-    validation(props) {
+    validationInput(props) {
         if (props.value.length !== 4)
             return 'ERROR!';
+    }
+
+    validate2 = (item) => {
+        console.log(item);
+
     }
 
     isValid() {

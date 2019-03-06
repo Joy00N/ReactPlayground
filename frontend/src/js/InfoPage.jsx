@@ -1,11 +1,14 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
 import autoBind from 'react-autobind';
 import {Input} from 'antd';
 import Save from './Save.jsx';
 
+
 const {TextArea} = Input;
 
-export default class InfoPage extends React.Component {
+class InfoPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -20,9 +23,8 @@ export default class InfoPage extends React.Component {
         this.setState({inputValue: value});
     }
 
-    handleClick = () => {
-        this.save.isValid()
-    }
+
+
 
     render() {
         return (
@@ -34,9 +36,23 @@ export default class InfoPage extends React.Component {
                 >
                 </TextArea>
                 <br/>
-                <button onClick={this.handleClick}>Click me!</button>
-                <Save onRef={ref => (this.save = ref)}/>
+                <button onClick={this.props.action.validate2}>Click me!</button>
+                <Save />
             </div>
         );
     }
 }
+
+function mapStateToProps(state, prop){
+    return {
+        save: state.save
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        action: bindActionCreators(Save, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(InfoPage);
