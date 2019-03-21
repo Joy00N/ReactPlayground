@@ -1,18 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 
-
 const testData = [
-    {name: "Joy", avatar_url: "https://avatars3.githubusercontent.com/u/38506754?v=4", company: "1234!"},
-    {name: "Sophie Alpert", avatar_url: "https://avatars2.githubusercontent.com/u/6820?v=4", company: "Humu"},
-    {name: "Sebastian Markbåge", avatar_url: "https://avatars2.githubusercontent.com/u/63648?v=4", company: "Facebook"},
-    {name: "Joy", avatar_url: "https://avatars3.githubusercontent.com/u/38506754?v=4", company: "1234!"},
-    {name: "Sophie Alpert", avatar_url: "https://avatars2.githubusercontent.com/u/6820?v=4", company: "Humu"},
-    {name: "Sebastian Markbåge", avatar_url: "https://avatars2.githubusercontent.com/u/63648?v=4", company: "Facebook"},
-    {name: "Joy", avatar_url: "https://avatars3.githubusercontent.com/u/38506754?v=4", company: "1234!"},
-    {name: "Sophie Alpert", avatar_url: "https://avatars2.githubusercontent.com/u/6820?v=4", company: "Humu"},
-    {name: "Sebastian Markbåge", avatar_url: "https://avatars2.githubusercontent.com/u/63648?v=4", company: "Facebook"},
-
+    {name: "Joy", avatar_url: "https://avatars3.githubusercontent.com/u/38506754?v=4", company: "1234!"}
 ];
 
 const CardList = (props) => (
@@ -54,6 +44,7 @@ class App extends Component {
             <div>
                 <CardList/>
                 <div className="header">{this.props.title}</div>
+                <div><p>Hello Hello</p></div>
                 <Form/>
             </div>
         );
